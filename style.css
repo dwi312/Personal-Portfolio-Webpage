@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --ff-Montserrat: 'Montserrat', sans-serif;
+    --ff-Poppins: 'Poppins', sans-serif;
+
+    --text-normal: 16px;
+    --text-header: 25px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-Montserrat);
+    scroll-behavior: smooth;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* HEADER */ 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: max-content;
+    padding: 20px 0;
+    border-bottom: 1px solid white;
+    background: linear-gradient(transparent, rgba(255, 0, 200, 0.61), transparent);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.442);
+    transition: 0.4s;
+}
+header:hover {
+    background: linear-gradient(white, rgb(225, 0, 255), white);
+}
+.header_container {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+span {
+    letter-spacing: 2px;
+    font-family: var(--ff-Poppins);
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+li a {
+    padding: 0 20px;
+    color: white;
+    text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.65);
+    transition: .3s;
+}
+li a:hover {
+    color: rgb(125, 246, 255);
+    text-shadow: 1px 3px 15px rgba(2, 255, 255, 0.611),
+                    1px 3px 4px rgba(0, 0, 0, 0.65);
+
+}
+
+/* welcome section */
+.welcome_section {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(191, 253, 224);
+}
+.title {
+    font-size: 3vw;
+    font-family: var(--ff-Poppins);
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: salmon;
+}
+.title-desc {
+    font-size: 2vw;
+    color: sandybrown;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Project section */
+.project_section {
+    width: 100%;
+    max-width: 100%;
+    padding: 75px 0 40px;
+    background: rgb(255, 163, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.project_section h1 {
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 35px rgb(1, 255, 242),
+    -5px 5px 5px rgba(0,0,0,.28);
+    animation-name: title-project;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes title-project {
+    0% { color: salmon;}
+    50% {
+        color: rgb(32, 222, 255);
+        transform: scaleX(1.4);
+    }
+    75% {
+        color: salmon;
+        transform: scaleX(.8);
+    }
+    100% {
+        color: rgb(32, 222, 255);
+        transform: scaleX(1.2);
+    }
+
+}
+.projectBx {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 30px;
+}
+img {
+    width: 550px;
+    height: auto;
+}
+.box {
+    margin: 10px;
+    padding: 17px 20px;
+    border-radius: 10px;
+    background: rgb(123, 255, 141);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.link-btn {
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--ff-Poppins);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    color: cornsilk;
+    background: crimson;
+    border-radius: 5px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+}
+.link-btn:hover {
+    background: cyan;
+    color: rgb(36, 51, 255);
+
+}
+
+footer {
+    width: 100%;
+    background: rgb(71, 71, 71);
+}
+.footer_container {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact {
+    color: whitesmoke;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 578px) {
+
+    :root {
+        --ff-Montserrat: 'Montserrat', sans-serif;
+        --ff-Poppins: 'Poppins', sans-serif;
+    
+        --text-normal: 14px;
+        --text-header: 20px;
+    }
+}
